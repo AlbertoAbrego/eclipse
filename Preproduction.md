@@ -127,6 +127,29 @@ Core Fantasy refinada
 
 ### Game pillars
 
+1. Expediciones significativas
+   Cada incursión debe generar una historia.
+
+No una repetición.
+
+1. Horror religioso y descubrimiento
+
+El mundo debe ser inquietante.
+
+El jugador debe querer encontrar la siguiente nota, reliquia o santuario.
+
+3. Builds expresivas
+
+Las decisiones de objetos y mejoras cambian radicalmente la forma de jugar.
+
+4. Riesgo con consecuencias
+
+Quedarse más tiempo aumenta la recompensa y el peligro.
+
+5. Mundo coherente
+
+Cada enemigo, objeto, lugar y reliquia debe sentirse parte del mismo universo.
+
 ### Core gameplay loop
 
 Propondría algo como:

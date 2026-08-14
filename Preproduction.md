@@ -154,11 +154,64 @@ Yo propondría tener al menos:
 
 ## Diseno
 
-Arte 2D ya sea pixel art o estilo personal 2D en formato top-down
-
 ### Personaje
 
+Personaje jugable 1: 
+
+- Nombre: Adam
+- Edad: 35 años
+- Profesion: Herrero
+
 ### Enemigos
+
+1. Demonio menor:
+
+   - Vida: 50
+   - Daño: 8
+   - Velocidad: 30?
+
+2. Demonio superior:
+
+   - Vida: 100
+   - Daño: 18
+   - Velocidad: 45?
+
+3. Demonio Arcano:
+
+   - Vida: 230
+   - Daño: 45
+   - Velocidad: 60?
+
+4. Malakor (boss):
+
+   - Vida: 500
+   - Daño: 100
+   - Velocidad: 80?
+
+5. Espiritu menor:
+   
+   - Vida: 30
+   - Daño: 3
+   - Velocidad: 45?
+   
+6. Espiritu superior:
+
+   - Vida: 45
+   - Daño: 10
+   - Velocidad: 60?
+ 
+7. Espiritu arcano:
+
+   - Vida: 60
+   - Daño: 15
+   - Velocidad: 80?
+
+8. (boss):
+
+   - Vida: 400
+   - Daño 85
+   - Velocidad: 110?
+
 
 ### Armas
 

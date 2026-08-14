@@ -278,7 +278,7 @@ Personaje jugable 1:
    - Daño: 15
    - Velocidad: 80?
 
-8. (boss):
+8. Vesper (boss):
 
    - Vida: 400
    - Daño 85

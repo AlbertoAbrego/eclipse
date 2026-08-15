@@ -226,9 +226,11 @@ Yo propondría tener al menos:
 
 ## Diseno
 
+> Creo que ya es hora de escribir el Lore de este juego, hagamoslo en **/lore.md**
+
 ### Personaje
 
-Personaje jugable 1: 
+Personaje jugable 1:
 
 - Nombre: Adam
 - Edad: 35 años
@@ -236,66 +238,129 @@ Personaje jugable 1:
 
 ### Enemigos
 
-1. Demonio menor:
+GPT propone:
 
+- Corrompido: humano, lento melee.
+- Devorador: criatura deformada, rapido, salta.
+- Vigia: entidad religiosa, a distancia.
+- Penitente: enemigo resistente, escudo.
+- Heraldo del renacer: elite, invoca corrupcion.
+- Malakor: boss.
+  Propone que los enemigos cuenten historia y estoy algo de acuerdo.
+  En lugar de usar números, usar categorías. Bajo, Medio, Alto
+
+1. Demonio menor:
    - Vida: 50
    - Daño: 8
    - Velocidad: 30?
 
 2. Demonio superior:
-
    - Vida: 100
    - Daño: 18
    - Velocidad: 45?
 
 3. Demonio Arcano:
-
    - Vida: 230
    - Daño: 45
    - Velocidad: 60?
 
 4. Malakor (boss):
-
    - Vida: 500
    - Daño: 100
    - Velocidad: 80?
 
 5. Espiritu menor:
-   
    - Vida: 30
    - Daño: 3
    - Velocidad: 45?
-   
-6. Espiritu superior:
 
+6. Espiritu superior:
    - Vida: 45
    - Daño: 10
    - Velocidad: 60?
- 
-7. Espiritu arcano:
 
+7. Espiritu arcano:
    - Vida: 60
    - Daño: 15
    - Velocidad: 80?
 
 8. Vesper (boss):
-
    - Vida: 400
    - Daño 85
    - Velocidad: 110?
 
-
 ### Armas
+
+| Nombre   | Damage | Velocidad Ataque | Tipo      |
+| :------- | :----- | :--------------- | :-------- |
+| Martillo | alto   | lento            | mele      |
+| Espada   | medio  | rapido           | mele      |
+| Ballesta | alto   | lento            | distancia |
+
+1. Martillo
+   Lento, mucho daño.
+   - Daño: 6
+2. Espada
+   Rapido, daño medio.
+3. Ballesta
+   A distancia, daño alto, recarga lenta.
 
 ### Mejoras
 
+1. Vida: +100
+2. Daño: +5%
+3. Velocidad de movimiento: +15
+
+Debería ponerles nombres y más variantes?
+Pensaba en objetos en específico, como collares, medallones, anillos, etc.
+
+Propuestas de GPT:
+
+- Anillo del Herrero: Los golpes pesados tienen probabilidad de aturdir.
+- Medallón del Mártir: Pierdes vida máxima. Aumenta mucho el daño.
+- Rosario Agrietado: Los enemigos cercanos reciben daño periódico.
+- Fragmento del Renacer: Las muertes aumentan temporalmente tu poder. Pero también la corrupción.
+- Linterna Consagrada: Revela secretos y reduce efectos de oscuridad.
+
+Los cuales creo que puedo tomar cosas
+
+Se requieren categorias:
+
+- Reliquias
+- Consumibles
+- Materiales
+- Objetos de mision
+
 ### Jefe
+
+Puede ser entre Vesper y Malakor
+Se me ocurre investigar nombres de los Papa de la historia, alguno de esos nombres podría ser bueno para algún boss
 
 ### Mundo
 
+Imagino que es el diseño del mapa?
+
+- Ciudad Gilead
+- Bosque
+- Cementerio
+- Rio
+- Campos de cultivo
+
 ### Narrativa
 
+Una breve descripción al elegir el personaje, por ahora sólo de Adam.
+
+Adam: Es un adulto de la ciudad Gilead, aprendió el oficio de Herrero por su padre, desde pequeño aprendió a ganarse la vida, por su trabajo tiene un físico destacado y es resistente, después del evento del Renacer, la ciudad ha tenido problemas para tener un comercio próspero, Adam ha sido afectado y ha tenido que buscar otras fuentes de ingreso, por lo que al ir a rezar a la iglesia, un obispo le ofreció una recompensa en oro si le ayudaba a recuperar un collar que fue robado, dicho objeto parece ser muy importante y sagrado, por lo que la recompensa es bastante tentadora, Adam acepta y se adentra a investigar qué pasó con el collar perdido, lo han mandado a investigar con uno de los campesinos que han sido testigos del hurto antes de llegar a casa de Cedric se encuentra emboscado por criaturas extrañas (Demonios menores) y debe pelear para salir con vida, una vez Adam le pregunta al campesino Cedric por información, después al salir del hogar de Cedric, se topa con criaturas extrañas nuevamente (Demonios menores y superiores). Podríamos empezar el juego directamente saliendo de la iglesia y marcar un rumbo a la casa del campesino Cedric.
+
 ### UI
+
+- Barra de vida
+- Barra de experiencia
+- Nivel
+- Foto de perfil del jugador?
+- Objetos equipados o logos de buffos
+
+No encuentro más cosas para mostrar de momento
 
 ## Arquitectura
 

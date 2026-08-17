@@ -21,6 +21,8 @@ Riesgo de diseño: medio
 
 ### Genero
 
+Estuve mirando los incrementales y creo que podría ser un incremental, roguelite de accion, con algo de roguelike, exploracion.
+
 **Principal**: Roguelite de accion
 
 _Secundarios:_
@@ -235,6 +237,12 @@ Personaje jugable 1:
 - Nombre: Adam
 - Edad: 35 años
 - Profesion: Herrero
+
+Personaje jugable 2:
+
+- Nombre: Alice
+- Edad: 30 años
+- Profesion: Clériga
 
 ### Enemigos
 

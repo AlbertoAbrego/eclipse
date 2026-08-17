@@ -372,21 +372,256 @@ No encuentro más cosas para mostrar de momento
 
 ## Arquitectura
 
+ECLIPSE
+|
+├── Core
+| ├─ Game
+| ├─ Save
+| ├─ Events
+| └─ Data
+|
+├── Gameplay
+| ├─ Player
+| ├─ Combat
+| ├─ Enemies
+| ├─ Weapons
+| ├─ Items
+| ├─ Progression
+| └─ World
+|
+├── UI
+|
+└── Content
+├─ Characters
+├─ Weapons
+├─ Enemies
+├─ Items
+└─ Levels
+
 ### Sistemas principales
+
+**Core**
+
+- Game State
+- Save System
+- Event System
+- Settings
+
+**Gameplay**
+
+- Player
+- Combat
+- Health/Damage
+- Weapons
+- Items
+- Inventory
+- Enemy System
+- Experience/Level
+- Progression
+- Expedition
+- Sanctuary
+- World/Map
+
+**Meta**
+
+- Permanent Progression
+- Unlocks
+- Achievements
+
+**UI**
+
+- HUD
+- Inventory
+- Character
+- Map
+- Menus
+- Dialogue
+- Lore/Notes
 
 ### Estructura de escenas
 
+Main
+│
+├── Game
+│ ├── World
+│ ├── Player
+│ ├── Enemies
+│ └── Systems
+│
+└── UI
+
 ### Resources
+
+Los Resource serán nuestros datos configurables.
+
+Por ejemplo:
+
+- WeaponData
+- EnemyData
+- ItemData
+- RelicData
+- CharacterData
+- PerkData
+- ZoneData
+- DialogueData
+
+Así podemos definir:
+
+EnemyData
+├── name
+├── health
+├── damage
+├── movement_speed
+├── experience_reward
+└── behavior
+
+Y separar:
+
+qué es un enemigo
+
+de
+
+cómo funciona el sistema de enemigos.
+
+Esto será muy importante para que después puedas crear contenido sin tocar código.
 
 ### Autoloads
 
+Inicialmente propondría solamente:
+
+- GameState: Estado global de la aplicación.
+- SaveManager: Guardar/cargar.
+- EventBus: Eventos globales.
+- SettingsManager: Configuraciones.
+
+Y posiblemente:
+
+- AudioManager: Más adelante.
+
 ### Comunicacion entre sistemas
+
+Aquí establecería una regla desde el principio:
+
+> Los sistemas deben depender lo menos posible unos de otros.
+
+En cambio:
+Enemy
+↓
+emite EnemyDied
+↓
+Gameplay systems reaccionan
 
 ### Guardado
 
+Aquí el sistema incremental cambia bastante las cosas.
+
+Necesitamos distinguir:
+
+**Estado permanente**
+
+Se guarda:
+
+- perks desbloqueados
+- armas desbloqueadas
+- reliquias descubiertas
+- lore descubierto
+- zonas desbloqueadas
+- logros
+- configuraciones
+
+**Estado de expedición**
+
+Se puede perder:
+
+- HP
+- XP
+- nivel
+- uild
+- objetos no asegurados
+- recursos temporales.
+
 ### Datos
 
+Separaría tres categorías.
+
+**Game Data**
+
+Datos diseñados por nosotros.
+
+```
+EnemyData
+WeaponData
+RelicData
+ZoneData
+```
+
+**Runtime Data**
+
+Estado actual de la partida
+
+```
+CurrentHealth
+CurrentXP
+CurrentInventory
+CurrentBuild
+```
+
+**Persistent Data**
+
+Lo que sobrevivió de la partida
+
+```
+UnlockedWeapons
+UnlockedPerks
+DiscoveredLore
+CompletedAchievements
+```
+
 ### Limites de responsabilidad
+
+Esta sería probablemente mi regla arquitectónica principal:
+
+> Cada sistema debe tener una responsabilidad clara y una razón concreta para cambiar.
+
+Por ejemplo:
+
+**Player**
+
+Se ocupa del comportamiento del jugador.
+
+No guarda el juego.
+
+No administra el inventario global.
+
+No desbloquea perks.
+
+#### Arquitectura conceptual inicial
+
+```
+                         ┌─────────────┐
+                         │  GameState  │
+                         └──────┬──────┘
+                                │
+                    ┌───────────┴───────────┐
+                    │                       │
+              Gameplay                   Meta
+                    │                       │
+        ┌───────────┼───────────┐     ┌────┴────┐
+        │           │           │     │         │
+      Player      Combat     World  Progress  Unlocks
+        │           │           │
+        └───────────┼───────────┘
+                    │
+                 Events
+                    │
+              ┌─────┼─────┐
+              │     │     │
+             UI    Audio  VFX
+
+                  SaveManager
+                       │
+              Persistent Data
+```
 
 ## Produccion
 

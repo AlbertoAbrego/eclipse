@@ -372,6 +372,7 @@ No encuentro más cosas para mostrar de momento
 
 ## Arquitectura
 
+```
 ECLIPSE
 |
 ├── Core
@@ -397,6 +398,7 @@ ECLIPSE
 ├─ Enemies
 ├─ Items
 └─ Levels
+```
 
 ### Sistemas principales
 
@@ -440,6 +442,7 @@ ECLIPSE
 
 ### Estructura de escenas
 
+```
 Main
 │
 ├── Game
@@ -449,6 +452,7 @@ Main
 │ └── Systems
 │
 └── UI
+```
 
 ### Resources
 
@@ -467,6 +471,7 @@ Por ejemplo:
 
 Así podemos definir:
 
+```
 EnemyData
 ├── name
 ├── health
@@ -474,6 +479,7 @@ EnemyData
 ├── movement_speed
 ├── experience_reward
 └── behavior
+```
 
 Y separar:
 
@@ -505,11 +511,13 @@ Aquí establecería una regla desde el principio:
 > Los sistemas deben depender lo menos posible unos de otros.
 
 En cambio:
+```
 Enemy
 ↓
 emite EnemyDied
 ↓
 Gameplay systems reaccionan
+```
 
 ### Guardado
 

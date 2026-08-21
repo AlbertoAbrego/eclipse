@@ -372,6 +372,7 @@ No encuentro más cosas para mostrar de momento
 
 ## Arquitectura
 
+```
 ECLIPSE
 |
 ├── Core
@@ -397,6 +398,7 @@ ECLIPSE
 ├─ Enemies
 ├─ Items
 └─ Levels
+```
 
 ### Sistemas principales
 
@@ -440,6 +442,7 @@ ECLIPSE
 
 ### Estructura de escenas
 
+```
 Main
 │
 ├── Game
@@ -449,6 +452,7 @@ Main
 │ └── Systems
 │
 └── UI
+```
 
 ### Resources
 
@@ -467,6 +471,7 @@ Por ejemplo:
 
 Así podemos definir:
 
+```
 EnemyData
 ├── name
 ├── health
@@ -474,6 +479,7 @@ EnemyData
 ├── movement_speed
 ├── experience_reward
 └── behavior
+```
 
 Y separar:
 
@@ -505,11 +511,13 @@ Aquí establecería una regla desde el principio:
 > Los sistemas deben depender lo menos posible unos de otros.
 
 En cambio:
+```
 Enemy
 ↓
 emite EnemyDied
 ↓
 Gameplay systems reaccionan
+```
 
 ### Guardado
 
@@ -604,11 +612,11 @@ No desbloquea perks.
                                 │
                     ┌───────────┴───────────┐
                     │                       │
-              Gameplay                   Meta
+                 Gameplay                  Meta
                     │                       │
-        ┌───────────┼───────────┐     ┌────┴────┐
-        │           │           │     │         │
-      Player      Combat     World  Progress  Unlocks
+        ┌───────────┼───────────┐      ┌────┴────┐
+        │           │           │      │         │
+      Player      Combat     World   Progress  Unlocks
         │           │           │
         └───────────┼───────────┘
                     │
@@ -626,6 +634,128 @@ No desbloquea perks.
 ## Produccion
 
 ### Milestones
+
+#### M1 - Foundation
+**Construir la base técnica**
+
+- proyecto Godot
+- estructura de carpetas
+- Git
+- arquitectura inicial
+- escenas base
+- GameState
+- SaveManager
+- sistema de datos
+- player controller
+- cámara
+- input
+- UI básica
+
+Resultado:
+> Podemos iniciar el juego, controlar a Adam y guardar/cargar un estado básico
+
+#### M2 - Core Combat
+
+- movimiento
+- ataque
+- daño
+- vida
+- muerte
+- enemigos
+- experiencia
+- level-up
+- primer arma
+- primer enemigo
+
+Resultado:
+> Existe una pequeña experiencia de combate jugable
+
+#### M3 - Core expedition
+
+- mapa
+- exploración
+- invetario
+- objetos
+- reliquias
+- loot
+- santuario
+- regreso a base
+- pérdida de progreso temporal
+
+Resultado:
+> Ya existe el verdadero loop de Eclipse
+
+#### M4 - Progresión
+
+- progresión permanente
+- perks
+- desbloqueos
+- armas adicionales
+- meta-progresión
+- guardado completo
+
+#### M5 - Content Vertical Slice
+
+Una mini versión representativa del juego visual:
+
+- región
+- varias zonas
+- enemigos
+- jefes
+- narrativa
+- UI
+- audio
+- VFX
+- progresión
+
+Resultado:
+> Alguien puede jugar Eclipse y entender qué pretende ser el juego terminado
+
+#### M6 - Producción
+
+Producción de contenido
+
+- enemigos
+- armas
+- reliquias
+- eventos
+- lore
+- mapas
+- jefe
+- arte
+- audio
+
+#### M7 - Alpha
+
+Todo el contenido principal está integrado
+Ya no deberían aparecer sistemas nuevos importantes
+
+#### M8 - Beta
+
+Prioridad:
+
+- Bugs
+- balance
+- UX
+- rendimiento
+- accesibilidad
+- compatibilidad
+
+#### M9 - Release candidate
+
+- Steam
+- builds
+- configuración
+- logros
+- guardado
+- gamepad
+- tutorial
+- QA
+- playtesting externo
+
+#### M10 - Release
+
+Publicación
 
 ### Stories
 
